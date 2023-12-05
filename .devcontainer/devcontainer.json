@@ -1,0 +1,17 @@
+{
+    "name": "latex-env",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "fabiospampinato.vscode-todo-plus",
+                "James-Yu.latex-workshop",
+                "jebbs.plantuml",
+                "mhutchie.git-graph",
+                "streetsidesoftware.code-spell-checker"
+            ]
+        }
+    },
+    "build": {
+        "dockerfile": "Dockerfile"
+    }
+}
