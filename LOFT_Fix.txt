@@ -1,0 +1,31 @@
+----------------------------------------------------------
+----------------------------------------------------------
+TAMU LaTeX Thesis/Dissertation Template
+
+List of Figures/Tables Spacing Fix
+
+Mail: thesis@tamu.edu; welcome@overleaf.com
+
+Office: 208 Nagle Building
+
+Phone: (979) 845-3631
+----------------------------------------------------------
+----------------------------------------------------------
+
+A known issue in the template is that the spacing between
+caption titles in the List of Figures of the List of
+Tables sometimes is inconsistent. This also appears to
+occur at random. If your document has nonuniform spacing
+between caption titles, open the files DocumentName.lot
+and DocumentName.lof for the List of Tables and List of
+Figures, respectively, where DocumentName is the name of
+your document. Comment out the lines containing
+
+\addvspace {10\p@ }
+
+and recompile the document. This may take a few tries, but
+the spacing should correct itself.
+
+To my knowledge, there is no uniform way to correct this
+automatically, as the situation does not arise for all
+documents.

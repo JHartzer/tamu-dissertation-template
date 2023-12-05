@@ -1,0 +1,32 @@
+----------------------------------------------------------
+----------------------------------------------------------
+TAMU LaTeX Thesis/Dissertation Template
+
+Compilation Instructions
+
+Mail: thesis@tamu.edu; welcome@overleaf.com
+
+Office: 208 Nagle 
+
+Phone: (979) 845-3631
+----------------------------------------------------------
+----------------------------------------------------------
+This document outlines some basic compilation instructions
+for the LaTeX template.
+
+From a GUI, you'll need the following compilation sequence:
+
+XeLaTeX - BibTex - XeLaTeX - XeLaTeX
+
+PDFLaTeX is not suggested, as this template was built to
+use XeLaTeX. The file Instructions.pdf outlines how to
+set the proper xetex drivers.
+
+Compilation can also be done in the terminal. Navigate to
+the folder in which you have saved the main file
+TAMUTemplate.tex (or whatever you may have renamed it). In
+a Windows/DOS-style command prompt:
+
+xelatex tamutemplate & bibtex tamutemplate & xelatex tamutemplate & xelatex tamutemplate
+
+Linux users will need to replace & with && in the above.

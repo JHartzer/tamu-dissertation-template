@@ -1,0 +1,80 @@
+----------------------------------------------------------
+----------------------------------------------------------
+Reference FAQs
+
+Created by Thesis Office
+
+Mail: thesis@tamu.edu; welcome@overleaf.com
+
+Office: 208 Nagle Building
+
+Phone: (979) 845-3631
+----------------------------------------------------------
+----------------------------------------------------------
+
+CONTENTS
+
+I. About
+II. Handling References
+III. Placement of Reference Sections
+IV. Getting Help
+
+----------------------------------------------------------
+----------------------------------------------------------
+I. About
+----------------------------------------------------------
+----------------------------------------------------------
+This short file describes how to properly handle citations
+and create references.
+
+----------------------------------------------------------
+----------------------------------------------------------
+II. Handling References
+----------------------------------------------------------
+----------------------------------------------------------
+References are stored in the file myReference.bib. A
+manager such as JabRef can create these reference files
+easily. EndNote also has the ability to export .bib files.
+
+In these reference files, a key will need to be specified.
+The command \cite{KEY} will create an in-text citation of
+the reference pointed to by KEY. The command \nocite{KEY}
+will not place an in-text citation, but will only create
+a bibliography entry for the reference KEY. Only those
+references pointed to with \cite or \nocite commands will
+be included in the bibliography.
+
+----------------------------------------------------------
+----------------------------------------------------------
+III. Placement of Reference Sections
+----------------------------------------------------------
+----------------------------------------------------------
+Beginning Fall 2017, References may be placed at the end
+of each major section in the body of your document. If
+you intend to place your references at the end of each
+major section, place them under a subheading called
+References (or something similar). The minimum page
+length of half a page of text still applies in this case.
+See the Thesis and Dissertation Manual for more
+information.
+
+----------------------------------------------------------
+----------------------------------------------------------
+IV. Getting Help
+----------------------------------------------------------
+----------------------------------------------------------
+If you need assistance, feel free to email
+welcome@overleaf.com.
+I will try my best to answer your question. When sending
+an email, please be sure to send your entire LaTeX package
+in a .zip archive so I can identify the issue specific to
+your document.
+
+For general questions related to the Thesis Manual, the
+submission/review process, and the forms required,
+contact the Thesis Office at thesis@tamu.edu. 
+
+There are pre-submittal conferences that outline some of the
+guidelines outlined in the Thesis Manual, as well as
+describe the submission process and requirements.
+Events will appear on ERS when they are ready.
