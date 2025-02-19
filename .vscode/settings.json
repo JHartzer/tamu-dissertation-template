@@ -41,6 +41,14 @@
                 "%DOCFILE%"
             ],
             "env": {}
+        },
+        {
+            "name": "preprocess",
+            "command": "/usr/bin/python3",
+            "args": [
+                "preprocess.py"
+            ],
+            "env": {}
         }
     ],
     "latex-workshop.bibtex-format.tab": "4 spaces",
@@ -51,9 +59,12 @@
     "latex-workshop.view.pdf.viewer": "tab",
     "editor.wordWrap": "off",
     "[latex]": {
-        "editor.defaultFormatter": "James-Yu.latex-workshop"
+        "editor.defaultFormatter": "James-Yu.latex-workshop",
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 80
     },
     "files.exclude": {
-        "**/*.hash": true
+        "**/*.hash": true,
+        "**/*.aux": true
     }
 }

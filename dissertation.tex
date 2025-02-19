@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%  New template code for TAMU Theses and Dissertations starting Spring 2021.  
+%  New template code for TAMU Theses and Dissertations starting Spring 2021.
 %
 %
 %  Last Updated: 1/13/2021
@@ -64,6 +64,12 @@
 %Begin student defined packages.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\usepackage[printonlyused]{acronym}
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\expandafter\patchcmd\csname AC@\AC@prefix{}@acro\endcsname{{#3}}{{\MakeUppercase{#3}}}{}{}
+\makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %End student defined packages.
@@ -93,8 +99,8 @@
 % Uncomment out the next line if you have co-chairs.  You will also need to edit the titlepage.tex file.
 %\newcommand{\tamuchairtwo}{Additional Chair Name}
 \renewcommand{\tamumemberone}{Committee Member 1}
-\newcommand{\tamumembertwo}{Committee Member 2}
-\newcommand{\tamumemberthree}{Committee Member 3}
+\renewcommand{\tamumembertwo}{Committee Member 2}
+\renewcommand{\tamumemberthree}{Committee Member 3}
 \renewcommand{\tamudepthead}{Head of Department}
 
 %Type only May, August, or December.
@@ -103,21 +109,21 @@
 %Your department name goes here.
 \renewcommand{\tamudepartment}{Mathematics}
 
+% Boilerplate
+\include{boilerplate/B1_TitlePage}
+\include{boilerplate/B2_Abstract}
+\include{boilerplate/B3_Dedication}
+\include{boilerplate/B4_Acknowledgements}
+\include{boilerplate/B5_Contributors}
+\include{boilerplate/B6_Nomenclature}
+\include{boilerplate/B7_TableOfContents}
 
-\include{data/titlepage} % This is simply a file that formats and adds your titlepage, please do not edit this unless you have a specific need. .
+% Chapters
+\include{chapters/C1_Introduction}
+\include{chapters/C2_Figures}
+\include{chapters/C3_Tables}
+\include{chapters/C4_Conclusions}
 
-\include{data/abstract}
-\include{data/dedication}
-\include{data/acknowledgements}
-\include{data/contributors}
-\include{data/nomenclature}
-
-\include{data/lists}  % This is simply a file that formats and adds your toc, lof, and lot, please do not edit this unless you have a specific need.
-
-\include{data/section1}
-\include{data/section2}
-\include{data/section3}
-\include{data/section4}
 %The next line is the format for inserting new sections.
 %Replace the name "newsection"  with the name of your
 %new section file.
@@ -144,10 +150,7 @@
 %This file is a .bib database that contains the sources.
 %This removes the dependency on the previous file
 %bibliography.tex.
-\bibliography{data/myReference}
-
-
-
+\bibliography{references}
 
 %This next line includes appendices. The file
 %appendix.tex contains commands pointing to
@@ -155,7 +158,15 @@
 %pointers if you end up changing the filenames.
 %Leave this commented if you will not need
 %appendix material.
-\include{data/appendices}
+
+\begin{appendices}
+    \titleformat{\chapter}{\centering\normalsize}{APPENDIX \thechapter}{0em}{\vskip .5\baselineskip\centering}
+    \renewcommand{\appendixname}{APPENDIX}
+
+    \input{appendices/A1_First}
+    \input{appendices/A2_Second}
+
+\end{appendices}
 
 
 \end{document}

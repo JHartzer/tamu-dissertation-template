@@ -1,0 +1,159 @@
+\documentclass[10pt,compress]{beamer}
+
+\usetheme{Madrid}
+\definecolor{aggiemaroon}{RGB}{80,0,0} % Official RGB code for aggie maroon
+\usecolortheme[named=aggiemaroon]{structure}
+\useoutertheme{miniframes}
+\useinnertheme{rounded}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+\setbeamertemplate{caption}[numbered]
+\setbeamerfont{structure}{family=\rmfamily,series=\bfseries}
+\usefonttheme[stillsansseriftext]{serif}
+
+\usepackage[capitalise, noabbrev]{cleveref}
+\usepackage[english]{babel}
+\usepackage{acronym}
+\usepackage{amsmath}
+\usepackage{appendixnumberbeamer}
+\usepackage{arydshln}
+\usepackage{bm}
+\usepackage[justification=centering]{caption}
+\usepackage{enumerate}
+\usepackage{graphicx,animate}
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{subcaption}
+\usepackage{tikz}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\usepackage{multimedia}
+
+\graphicspath{{./images/}}
+\mathtoolsset{showonlyrefs}
+
+\renewcommand*\arraystretch{1.2}
+
+\setbeamerfont{bibliography item}{size=\footnotesize}
+\setbeamerfont{bibliography entry author}{size=\footnotesize}
+\setbeamerfont{bibliography entry title}{size=\footnotesize}
+\setbeamerfont{bibliography entry location}{size=\footnotesize}
+\setbeamerfont{bibliography entry note}{size=\footnotesize}
+
+% Custom commands
+\input{boilerplate/B0_Commands.tex}
+
+\usebackgroundtemplate{%
+    \vbox to \paperheight{
+        \vfil\hbox to \paperwidth{
+            \hfil\transparent{0.025}\includegraphics[height=\paperheight]{images/TAMU-Logo.png}\hfil
+        }\vfil
+    }
+}
+
+
+\title[Texas A\&M University]{THE TITLE OF YOUR THESIS OR DISSERTATION GOES IN THIS SPACE TO LET US KNOW WHAT YOUR DOCUMENT IS ABOUT}
+
+\author[AGGIE M. STUDENT]{AGGIE M. STUDENT}
+
+\institute[] % (optional, puts affiliation next to author in parenthesis)
+{
+  \emph{Mechanical Engineering Ph.D. Candidate} \newline
+  Texas A\&M University, College Station, TX
+}
+
+\date{\today}
+
+
+% \AtBeginSection[]
+% {
+%   \begin{frame}<beamer>
+%     \frametitle{Section \thesection: \secname}
+%     \tableofcontents[
+%       sectionstyle=show/shaded,
+%       subsectionstyle=show/show/hide
+%     ]
+%   \end{frame}
+% }
+
+\makeatletter
+\patchcmd{\beamer@sectionintoc}{\vskip1.5em}{\vskip0.5em}{}{}
+\patchcmd{\beamer@sectionintoc}{\vfill}{\vskip0.2em}{}{}
+\makeatother
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}{Table of Contents}
+    \tableofcontents[
+        sectionstyle=show/show,
+        subsectionstyle=hide/hide/hide
+    ]
+\end{frame}
+
+\section{Section 1}
+
+\begin{frame}{List Block}
+
+    \begin{block}{Contributions}
+        \begin{itemize}
+            \item Item 1
+            \item Item 2
+            \item Item 3
+            \item Item 4
+        \end{itemize}
+    \end{block}
+
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]{List Block}
+
+    This list is too long for one frame
+
+    \begin{itemize}
+        \item Item 1
+        \item Item 2
+        \item Item 3
+        \item Item 4
+        \item Item 5
+        \item Item 6
+        \item Item 7
+        \item Item 8
+        \item Item 9
+        \item Item 11
+        \item Item 12
+        \item Item 13
+        \item Item 14
+        \item Item 15
+        \item Item 16
+        \item Item 17
+        \item Item 18
+        \item Item 19
+    \end{itemize}
+
+\end{frame}
+
+\section{Section 2}
+
+\begin{frame}{Citation}
+    Random citation: \cite{ANCONS}
+\end{frame}
+
+\appendix
+
+\section{References}
+
+\begin{frame}[allowframebreaks]{References}
+    \bibliographystyle{ieeetr}
+    \bibliography{references}
+\end{frame}
+
+\end{document}

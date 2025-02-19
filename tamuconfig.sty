@@ -1,11 +1,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%  New template code for TAMU Theses and Dissertations starting Spring 2021.  
+%  New template code for TAMU Theses and Dissertations starting Fall 2016.
 %
 %
-%  Author: Thesis Office
+%  Author: Sean Zachary Roberson
 %	 Version 3.17.09
-%  Last updated 1/13/2021
+%  Last updated 09/01/2017
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -20,12 +20,12 @@
 \usepackage[letterpaper]{geometry}
 % Margins must be a minimum of one inch on all sides.
 \geometry{verbose, margin = 1in}
-	\usepackage[doublespacing]{setspace}
-	\usepackage{tocloft}
-		\renewcommand{\cftdotsep}{1.00} % Adjusts the size of the leader dot separation.
-	\usepackage[rm, tiny, center, compact]{titlesec}
-	\usepackage{indentfirst}
-	\usepackage{etoolbox}
+\usepackage[doublespacing]{setspace}
+\usepackage{tocloft}
+\renewcommand{\cftdotsep}{1.00} % Adjusts the size of the leader dot separation.
+\usepackage[rm, tiny, center, compact]{titlesec}
+\usepackage{indentfirst}
+\usepackage{etoolbox}
 
 \usepackage{tocvsec2}
 \usepackage[titletoc]{appendix}
@@ -63,15 +63,15 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%   Titlepage Commands
-%%%%%%%%%%\newcommand{\tamumanuscripttitle}{\title{Default Title}}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\tamumanuscripttitle}{\title{Default Title}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\tamumanuscripttitle}{Default Title}
 \newcommand{\tamupapertype}{DissertationOrThesis}
 \newcommand{\tamufullname}{Full Name}
 \newcommand{\tamudegree}{Doctor of Philosophy}
 \newcommand{\tamuchairone}{Chair Name}
 \newcommand{\tamumemberone}{Committee Member1}
-%\newcommand{\tamumembertwo}{Committee Member2}
-%\newcommand{\tamumemberthree}{Committee Member3}
+\newcommand{\tamumembertwo}{Committee Member2}
+\newcommand{\tamumemberthree}{Committee Member3}
 \newcommand{\tamudepthead}{Department Head}
 \newcommand{\tamugradmonth}{MonthofGraduation}
 \newcommand{\tamugradyear}{YearofGraduation}
@@ -79,11 +79,11 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%   Titlesec Customations 
+%%%   Titlesec Customations
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-	
-\titleformat{\chapter}{\centering\normalsize}{\thechapter.}{1em}{}
+
+\titleformat{\chapter}{\centering\normalsize\uppercase}{\thechapter.}{1em}{}
 \titleformat{\section}{\bf}{\thesection}{1em}{}
 \titleformat{\subsection}{\normalsize\bf}{\thesubsection}{1em}{}
 \titleformat{\subsubsection}{\normalsize\it}{\thesubsubsection}{1em}{}
@@ -91,21 +91,21 @@
 \setcounter{secnumdepth}{5}
 
 \addtocontents{toc}{\protect\renewcommand{\protect\cftchapleader}
-        {\protect\cftdotfill{\cftsecdotsep}}}  % puts leader dots on chapters.
+  {\protect\cftdotfill{\cftsecdotsep}}}  % puts leader dots on chapters.
 
 
 %%%%%%%%  Remove the extra vertical space before chapter titles when using report class %%%%%%%%%%%
 \makeatletter
 \def\ttl@mkchap@i#1#2#3#4#5#6#7{%
-    \ttl@assign\@tempskipa#3\relax\beforetitleunit
-    \vspace{\@tempskipa}%<<<<<< REMOVE THE * AFTER \vspace
-    \global\@afterindenttrue
-    \ifcase#5 \global\@afterindentfalse\fi
-    \ttl@assign\@tempskipb#4\relax\aftertitleunit
-    \ttl@topmode{\@tempskipb}{%
-        \ttl@select{#6}{#1}{#2}{#7}}%
-    \ttl@finmarks  % Outside the box!
-    \@ifundefined{ttlp@#6}{}{\ttlp@write{#6}}}
+  \ttl@assign\@tempskipa#3\relax\beforetitleunit
+  \vspace{\@tempskipa}%<<<<<< REMOVE THE * AFTER \vspace
+  \global\@afterindenttrue
+  \ifcase#5 \global\@afterindentfalse\fi
+  \ttl@assign\@tempskipb#4\relax\aftertitleunit
+  \ttl@topmode{\@tempskipb}{%
+    \ttl@select{#6}{#1}{#2}{#7}}%
+  \ttl@finmarks  % Outside the box!
+  \@ifundefined{ttlp@#6}{}{\ttlp@write{#6}}}
 \makeatother
 %%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -139,7 +139,7 @@
 % \renewcommand\cftpartafterpnum{\vskip\baselineskip}
 
 
-% Uncomment this line if you need more space between your table/figure numbers and your title in your 
+% Uncomment this line if you need more space between your table/figure numbers and your title in your
 % lof or lot. This will only need to be done if you have > 99 tables or figures in your manuscript.
 %\setlength{\cfttabnumwidth}{3em}  % Modify number width in LoT and LOF
 
@@ -171,7 +171,7 @@
   \ifnum\value{table}=0\addtocontents{lot}{\vskip-10pt}\fi
 }
 
- \preto\section{%  Removes the extra space added before new chapters
+\preto\section{%  Removes the extra space added before new chapters
   \ifnum\value{section}=0\addtocontents{toc}{\vskip+10pt}\fi
  }
 
@@ -181,10 +181,8 @@
 \renewcommand{\cftchapleader}{\normalsize\rm}
 
 \let\chaptermarkOLD\chaptermark
-    \renewcommand*\chaptermark[1]{\chaptermarkOLD{#1}\addtocontents{thefigure}{\protect\addvspace{30pt}}}
-		
-		
-		
+\renewcommand*\chaptermark[1]{\chaptermarkOLD{#1}\addtocontents{thefigure}{\protect\addvspace{30pt}}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % fix spacing in front of figures
 \setlength{\textfloatsep}{40pt plus 8.0pt minus 4.0pt}

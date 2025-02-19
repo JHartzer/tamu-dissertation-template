@@ -2,7 +2,7 @@
 ----------------------------------------------------------
 TAMU LaTeX Thesis/Dissertation Template
 
-List of Figures/Tables Spacing Fix
+List of Tables Spacing Fix
 
 Mail: thesis@tamu.edu; welcome@overleaf.com
 
